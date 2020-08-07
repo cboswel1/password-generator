@@ -16,6 +16,9 @@ Once the user completes the options presented to them, their random password wil
 
 ![Password Generator Preview](https://github.com/cboswel1/password-generator/blob/master/assets/images/Screen%20Shot%202020-08-07%20at%203.04.54%20PM.png?raw=true)
 
+## How Does It Work 
+
+Click here for a [live demo!](https://youtu.be/Ss70ZC3_odw)
 
 ## Live Site
 Link to live site: [Password-Generator](https://cboswel1.github.io/password-generator) - hosted on GitHub Pages. 
