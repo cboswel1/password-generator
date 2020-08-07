@@ -101,9 +101,7 @@ function generatePassword() {
   }
   // 2 choice 
   else if (lowerCon && specialCon) {
-     console.log("2 choice 4");
      response = lowerCase.concat(special);
-     console.log(response);
   }
   // 2 choice 
   else if (lowerCon && numbersCon) {
