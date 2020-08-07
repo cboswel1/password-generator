@@ -10,6 +10,8 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: #484d5c;
+  font-family: 'Oswald', sans-serif;
 }
 
 body {
@@ -22,6 +24,12 @@ body {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+h1 {
+  color: #ffce00;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
 header {
@@ -41,6 +49,10 @@ header {
   margin: 0 auto;
   max-width: 800px;
   padding: 30px 40px;
+}
+
+.card-header {
+  text-align: center;
 }
 
 .card-header::after {
