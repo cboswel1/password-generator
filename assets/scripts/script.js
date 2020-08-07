@@ -12,12 +12,6 @@ const special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
 
 
 
-
-
-//. split .concat
-
-
-
 var generateBtn = document.querySelector("#generate");
 
 
@@ -169,23 +163,24 @@ function generatePassword() {
      console.log(response);
   };
 
+  var pass= []
 
-  // loop that can take in user's choice, and randomize selection based on length
-  // for (var i = 0; 1 < passLength; i++) {
-  //   var userChoice = 
-  // }
+  // loop that can take in user's choice (response), and randomize selection based on length
+  for (var i = 0; i < passLength; i++) {
+    var userChoice = response[Math.floor(Math.random() * response.length)];
+    pass.push(userChoice);
+    console.log(pass);
+  }
+  
 }    
     
-    // User must select 4 possible criteria (Uppercase, lowercase, numbers, special Characters)
+
 
     
 
    
 
   
-
-
-    // If user chooses any of the prompts, then initiate their use 
 
 
 
