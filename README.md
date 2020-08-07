@@ -21,7 +21,7 @@ Once the user completes the options presented to them, their random password wil
 Click here for a [live demo!](https://youtu.be/Ss70ZC3_odw)
 
 ## Live Site
-Link to live site: [Password-Generator](https://cboswel1.github.io/password-generator) - hosted on GitHub Pages. 
+Link to live site: [Password-Generator](https://cboswel1.github.io/password-generator/) - hosted on GitHub Pages. 
 
 ## Authored By
 This application was authored by [Christian Boswell](https://github.com/cboswel1)
