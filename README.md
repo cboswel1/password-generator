@@ -18,7 +18,7 @@ Once the user completes the options presented to them, their random password wil
 
 ## How Does It Work 
 
-Click here for a [live demo!](https://youtu.be/Ss70ZC3_odw)
+Click here for a [live demo!](https://www.youtube.com/watch?v=lLkFf8sXjmI)
 
 ## Live Site
 Link to live site: [Password-Generator](https://cboswel1.github.io/password-generator/) - hosted on GitHub Pages. 
