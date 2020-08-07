@@ -172,13 +172,13 @@ function generatePassword() {
   // loop that can take in user's choice (response), and randomize selection based on length
   for (var i = 0; i < passLength; i++) {
     var userChoice = response[Math.floor(Math.random() * response.length)];
-    //.push to take userChoice variable outcome and plug into pass array
+    //.push to take userChoice variable outcome and plug into empty pass array
     pass.push(userChoice);
-    //I kept getting commas in between, I had to look this up.
+    //I kept getting commas in between, I had to look this up. Any other methods?
     console.log(pass.join(''));
   };
   
-   // How do I get rid of the commas!!!!
+   
 
 }
 
