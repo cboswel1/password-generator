@@ -5,16 +5,17 @@
 
 
 // Array of potential random user criteria
-const upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]; 
-const lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-const numbers = [1,2,3,4,5,6,7,8,9,0];
-const special = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"]
+const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+const lowerCase = "abcdefghijklmnopqrstuvwxyz"
+const numbers = "1234567890"
+const special = "!@#$%^&*()"
 
 
 
 var generateBtn = document.querySelector("#generate");
 
-
+// empty array for loop at bottom. Moved out of function 
+var pass= [];
 
 // Function to generate password
 function generatePassword() {
@@ -163,58 +164,23 @@ function generatePassword() {
      console.log(response);
   };
 
-  var pass= []
+  //loop for random password section 
+
+  // empty array holder for userChoice outcome 
+  // var pass= [];
 
   // loop that can take in user's choice (response), and randomize selection based on length
   for (var i = 0; i < passLength; i++) {
     var userChoice = response[Math.floor(Math.random() * response.length)];
+    //.push to take userChoice variable outcome and plug into pass array
     pass.push(userChoice);
-    console.log(pass);
-  }
+    //I kept getting commas in between, I had to look this up.
+    console.log(pass.join(''));
+  };
   
-}    
-    
+   // How do I get rid of the commas!!!!
 
-
-    
-
-   
-
-  
-
-
-
-   
-
-    
-
-    // function password(l, Characters) {
-    //   var pwd = "" ;
-    //   for(let i = 0; i<l; i++) {
-    //     pwd += Characters.charAt(Math.floor(Math.random() * Characters.length)); 
-    //   }
-    //   return pwd; 
-    // }
-
-    // console.log(password(passLength, lowerCase));
-
-       
-
-
-
-          
-
-
-        
-
-          
-        
-
-          
-          
-
-
-
+}
 
 
 
@@ -226,11 +192,12 @@ function generatePassword() {
       var password = generatePassword();
       var passwordText = document.querySelector("#password");
 
-      console.log(passwordText);
 
-      passwordText.value = password;
+      passwordText.value = pass.join('');
 
     }
+
+    
 
     // Add event listener to generate button
     generateBtn.addEventListener("click", writePassword);
