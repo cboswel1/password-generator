@@ -4,7 +4,7 @@
 
 
 
-// Array of potential random user criteria
+// Variables with potential user criteria
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
 const lowerCase = "abcdefghijklmnopqrstuvwxyz"
 const numbers = "1234567890"
@@ -14,13 +14,13 @@ const special = "!@#$%^&*()"
 
 var generateBtn = document.querySelector("#generate");
 
-// empty array for loop at bottom. Moved out of function 
+// empty array for loop of user criteria. 
 var pass= [];
 
 // Function to generate password
 function generatePassword() {
 
-  // stores users choice. 
+  // stores users choice from possible selection criteria.  
   var response = ""; 
 
     //User Prompts Section
@@ -46,158 +46,104 @@ function generatePassword() {
     // Ask user if they wish to have uppercase letters in their password 
 
       var upperCon = confirm("Would you like to use uppercase characters in your password?"); 
-      console.log(upperCon);
   
     // Ask user if they wish to have lowercase letters in their password 
     
       var lowerCon = confirm("Would you like to use lowercase characters in your password?"); 
-      console.log(lowerCon);
 
     //Ask user if they wish to have numbers in their password 
     
       var numbersCon = confirm("Would you like to use numbers in your password?"); 
-      console.log(numbersCon);
 
     // Ask user if they wish to have special characters in their password 
 
       var specialCon = confirm("Would you like to use special characters in your password?");
-      console.log(specialCon);
   }; 
   
     // Let user know they must select at least one criteria 
 
   if (!upperCon && !lowerCon && !numbersCon && !specialCon) {
       alert("You must choose at least one criteria. Try again");
-      console.log(upperCon);
   } 
   // List of all possible user choices 
 
-  //response variable will hold values of user choice 
-
   // all choices
   else if (upperCon && lowerCon && numbersCon && specialCon) {
-      console.log("4 choices")
       response = upperCase.concat(lowerCase, numbers, special);
-      console.log(response);
   }
   // 3 choice
   else if (upperCon && lowerCon && numbersCon) {
-      console.log("3 choice 1");
       response = upperCase.concat(lowerCase, numbers);
-      console.log(response);
   } 
   // 3 choice
   else if (upperCon && lowerCon && specialCon) {
-      console.log("3 choice 2");
       response = upperCase.concat(lowerCase, special);
-      console.log(response);
   } 
   // 3 choice
   else if (upperCon && specialCon && numbersCon) {
-     console.log("3 choice 3");
-     response = upperCase.concat(special, numbers);
-     console.log(response);
-
+      response = upperCase.concat(special, numbers);
   } 
   // 3 choice 
   else if (lowerCon && specialCon && numbersCon) {
-     console.log("3 choice 4"); 
      response = lowerCase.concat(special, numbers);
-     console.log(response);
-
   }
   // 2 choice 
   else if (upperCon && specialCon) {
-     console.log("2 choice 1");
      response = upperCase.concat(special);
-
   }
   // 2 choice
   else if (upperCon && lowerCon) {
-     console.log("2 choice 2");
      response = upperCase.concat(lowerCon);
-     console.log(response);
   }
   // 2 choice 
   else if (upperCon && numbersCon) {
-     console.log("2 choice 3"); 
      response = upperCase.concat(numbers);
-     console.log(response);
-
   }
   // 2 choice 
   else if (lowerCon && specialCon) {
      console.log("2 choice 4");
-     response = lowerCon.concat(special);
+     response = lowerCase.concat(special);
      console.log(response);
-
   }
   // 2 choice 
   else if (lowerCon && numbersCon) {
-     console.log("2 choice 5"); 
-     response = lowerCon.concat(numbers); 
-     console.log(response);
+     response = lowerCase.concat(numbers); 
 
   }
   // 2 choice 
   else if (numbersCon && specialCon) {
-     console.log("2 choice 6"); 
      response = numbers.concat(special);
-     console.log(response);
   }
   // 1 choice 
   else if (upperCon) {
-     console.log("1 choice 1");
      response = upperCase;
-     console.log(response);
   }
   // 1 choice 
   else if (lowerCon) {
-     console.log("1 choice 2");
      response = lowerCase;
-     console.log(response);
   }
   // 1 choice 
   else if (numbersCon) {
-     console.log("1 choice 1");
-     response = numbersCon;
-     console.log(response);
+     response = numbers;
   };
-
-  //loop for random password section 
-
-  // empty array holder for userChoice outcome 
-  // var pass= [];
 
   // loop that can take in user's choice (response), and randomize selection based on length
   for (var i = 0; i < passLength; i++) {
     var userChoice = response[Math.floor(Math.random() * response.length)];
     //.push to take userChoice variable outcome and plug into empty pass array
     pass.push(userChoice);
-    //I kept getting commas in between, I had to look this up. Any other methods?
-    console.log(pass.join(''));
   };
-  
-   
-
 }
-
-
-
-
 
     // Write password to the #password input
     function writePassword() {
-      console.log('writePassword is running');
       var password = generatePassword();
       var passwordText = document.querySelector("#password");
 
-
+      // .join('') to remove commas from final output 
       passwordText.value = pass.join('');
 
     }
-
-    
 
     // Add event listener to generate button
     generateBtn.addEventListener("click", writePassword);
