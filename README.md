@@ -14,7 +14,7 @@ Once the user completes the options presented to them, their random password wil
 
 ## Preview 
 
-![Password Generator Preview](https://github.com/cboswel1/password-generator/blob/master/assets/images/Screen%20Shot%202020-08-07%20at%203.04.54%20PM.png?raw=true)
+![Password Generator Preview](https://github.com/cboswel1/password-generator/blob/master/assets/images/Screen%20Shot%202020-08-07%20at%204.44.30%20PM.png?raw=true)
 
 ## How Does It Work 
 
